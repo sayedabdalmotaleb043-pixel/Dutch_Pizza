@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icons of the Netherlands</title>
+</head>
+<body>
+
+    <center>
+        <marquee scrollamount="4">🌷 Welkom bij Nederland 🌷 Land of Tulips, Windmills, and Heritage 🌷</marquee>
+        <h1>Dutch Heritage & Culture</h1>
+        
+        <img src="image.jpg" alt="Dutch Woman" width="400" border="10">
+        <p><i>Celebrating the history and traditions of the Netherlands.</i></p>
+    </center>
+
+    <hr>
+
+    <h3>National Symbols</h3>
+    <dl>
+        <dt><b>The Tulip</b></dt>
+        <dd>The national flower of the Netherlands, originally imported in the 16th century.</dd>
+        
+        <dt><b>Klederdracht</b></dt>
+        <dd>Traditional Dutch clothing, often featuring the famous <mark>pointed white hats</mark> (Kanten muts).</dd>
+        
+        <dt><b>Windmills</b></dt>
+        <dd>Historic structures used for drainage and milling, now a symbol of Dutch engineering.</dd>
+    </dl>
+
+    <hr>
+
+    <h3>Influential Dutch Women</h3>
+    <table border="1" cellpadding="10">
+        <caption>Historic Figures</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Field</th>
+                <th>Notable Achievement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aletta Jacobs</td>
+                <td>Medicine</td>
+                <td>First female physician in the Netherlands.</td>
+            </tr>
+            <tr>
+                <td>Anne Frank</td>
+                <td>Literature</td>
+                <td>Author of the world-famous <cite>The Diary of a Young Girl</cite>.</td>
+            </tr>
+            <tr>
+                <td>Fanny Blankers-Koen</td>
+                <td>Athletics</td>
+                <td>Won 4 Gold Medals at the 1948 Olympics.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Tulip Bloom Monitor</h3>
+    <p>Current Season Progress:</p>
+    <label>Growth Status:</label>
+    <meter id="bloomMeter" min="0" max="100" low="30" high="70" optimum="90" value="45"></meter>
+    
+    <p>If you water the tulips, they grow faster!</p>
+    <button onclick="waterTulips()">Water the Flowers 💧</button>
+
+    <hr>
+
+    <h3>Travel Information</h3>
+    <p>To book a trip to Amsterdam, press <kbd>Alt</kbd> + <kbd>T</kbd>.</p>
+    <button onclick="showInfo()">View Travel Advisory</button>
+
+    <dialog id="travelModal">
+        <h2>Travel to the Netherlands</h2>
+        <p>The best time to visit is between <b>April</b> and <b>May</b> to see the flower fields.</p>
+        <samp>System Status: Flights Available.</samp>
+        <br><br>
+        <button onclick="document.getElementById('travelModal').close()">Close</button>
+    </dialog>
+
+    <hr>
+
+    <p>For more info, contact the <abbr title="Netherlands Board of Tourism & Conventions">NBTC</abbr>.</p>
+    <p><small>Site created for the Flavorless Workshop - No CSS Allowed.</small></p>
+
+    <script>
+        function waterTulips() {
+            var m = document.getElementById('bloomMeter');
+            if (m.value < 100) {
+                m.value += 10;
+            } else {
+                alert("The Tulips are in full bloom! 🌷");
+            }
+        }
+
+        function showInfo() {
+            // Using JS to manipulate the page without changing CSS properties
+            document.getElementById('travelModal').showModal();
+        }
+    </script>
+
+</body>
+</html>
